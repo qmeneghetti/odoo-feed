@@ -24,18 +24,11 @@
         <field name="res_model">feed.settings</field>
         <field name="view_mode">form</field>
         <field name="target">current</field>
-        <field name="res_id" eval="ref('feed.feed_default_config')"/>
+        <!-- Eliminar la referencia a res_id aquí -->
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Configura los parámetros del feed de productos
             </p>
         </field>
-    </record>
-
-    <!-- Datos iniciales - Registro de configuración predeterminado -->
-    <record id="feed_default_config" model="feed.settings">
-        <field name="name">Configuración Global</field>
-        <field name="shipping_cost">5.0</field>
-        <field name="default_category">General</field>
     </record>
 </odoo>

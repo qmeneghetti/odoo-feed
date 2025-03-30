@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Datos iniciales - Registro de configuración predeterminado -->
+    <record id="feed_default_config" model="feed.settings">
+        <field name="name">Configuración Global</field>
+        <field name="shipping_cost">5.0</field>
+        <field name="default_category">General</field>
+    </record>
+</odoo>
