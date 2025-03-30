@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <!-- Vista de Formulario para la Configuración del Feed -->
+        <record id="view_feed_settings_form" model="ir.ui.view">
+            <field name="name">feed.settings.form</field>
+            <field name="model">feed.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configuración del Feed de Productos">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="shipping_cost"/>
+                            <field name="currency"/>
+                            <field name="default_category"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista -->
+        <record id="action_feed_settings" model="ir.actions.act_window">
+            <field name="name">Configuración del Feed</field>
+            <field name="res_model">feed.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menú para acceder a la configuración -->
+        <menuitem id="menu_feed_settings" 
+                  name="Configuración de Feed" 
+                  parent="base.menu_custom" 
+                  action="action_feed_settings" />
+    </data>
+</odoo>

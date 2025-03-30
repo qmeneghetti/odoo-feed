@@ -1,12 +1,14 @@
 {
     "name": "Custom Product Feed",
     "summary": "Genera un feed XML para Google Shopping y Facebook",
+    'category': 'Sales',
     "author": "Quetzal Meneghetti",
-    "version": "1.0.8",
-    "depends": ["website", "product"],
+    "version": "1.1.0",
+    "depends": ["base","website", "product"],
     "data": [
-        "views/product_template_views.xml",  # Agregamos la vista aquí
+        "views/product_template_views.xml",  
+        "views/feed_settings_views.xml",
     ],
     "installable": True,
-    "application": False,
+    "application": True,
 }
