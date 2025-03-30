@@ -21,9 +21,8 @@ class FeedSettings(models.Model):
             })
         return config
     
-    # Override para que siempre abra el primer registro
-    @api.model
-    def get_empty_list_help(self, help):
+   @api.model
+    def get_empty_list_help(self, help=None):
         config = self.search([], limit=1)
         if not config:
             config = self.create({
@@ -31,4 +30,4 @@ class FeedSettings(models.Model):
                 'shipping_cost': 5.0,
                 'default_category': 'General'
             })
-        return super(FeedSettings, self).get_empty_list_help(help)
+        return super(FeedSettings, self).get_empty_list_help(help or '')
