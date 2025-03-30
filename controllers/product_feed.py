@@ -9,7 +9,7 @@ class ProductFeedController(http.Controller):
     def load_action(self, action_id):
         """Intercepta la acción para cargar configuración única"""
         action = request.env['ir.actions.actions'].browse([action_id])
-        if action_id == request.env.ref('custom_product_feed.action_feed_settings').id:
+        if action_id == request.env.ref('odoo-feed.action_feed_settings').id:
             # Busca la configuración existente o crea una nueva
             config = request.env['feed.settings'].get_config()
             action_data = action.read()[0]
