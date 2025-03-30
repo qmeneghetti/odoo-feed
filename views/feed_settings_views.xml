@@ -31,8 +31,8 @@
 
     <menuitem id="menu_feed_settings" 
           name="Configuración de Feed" 
-          parent="product.menu_catalog"  
+          parent="website.menu_website"  
           action="action_feed_settings" 
           sequence="20"/>
-          
+
 </odoo>
