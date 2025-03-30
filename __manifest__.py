@@ -4,7 +4,9 @@
     "author": "Quetzal Meneghetti",
     "version": "1.0",
     "depends": ["website", "product"],
-    "data": [],
+    "data": [
+        "views/product_template_views.xml",  # Agregamos la vista aquí
+    ],
     "installable": True,
     "application": False,
 }
