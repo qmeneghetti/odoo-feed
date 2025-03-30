@@ -8,7 +8,7 @@
             <form string="Configuración del Feed">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" invisible="1"/>
                         <field name="shipping_cost"/>
                         <field name="currency"/>
                         <field name="default_category"/>
@@ -18,28 +18,24 @@
         </field>
     </record>
 
-    <!-- Vista de lista (añadir esta vista) -->
-    <record id="view_feed_settings_list" model="ir.ui.view">
-        <field name="name">feed.settings.list</field>
-        <field name="model">feed.settings</field>
-        <field name="arch" type="xml">
-            <list string="Configuración del Feed">
-                <field name="name"/>
-                <field name="shipping_cost"/>
-                <field name="default_category"/>
-            </list>
-        </field>
-    </record>
-
     <!-- Acción para abrir la configuración del feed -->
     <record id="action_feed_settings" model="ir.actions.act_window">
         <field name="name">Configuración de Feed</field>
         <field name="res_model">feed.settings</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="res_id" eval="ref('feed.feed_default_config')"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Crea tu primera configuración de feed
+                Configura los parámetros del feed de productos
             </p>
         </field>
+    </record>
+
+    <!-- Datos iniciales - Registro de configuración predeterminado -->
+    <record id="feed_default_config" model="feed.settings">
+        <field name="name">Configuración Global</field>
+        <field name="shipping_cost">5.0</field>
+        <field name="default_category">General</field>
     </record>
 </odoo>

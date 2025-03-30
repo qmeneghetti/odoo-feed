@@ -11,7 +11,7 @@ class ProductFeedController(http.Controller):
         root = ET.Element("products")
 
         # Obtener los datos globales de configuración del feed
-        feed_settings = request.env['feed.settings'].sudo().search([], limit=1)
+        feed_settings = request.env['feed.settings'].sudo().get_config()
         shipping_cost = feed_settings.shipping_cost if feed_settings else 5.0  # Valor predeterminado si no hay configuraciones
         default_category = feed_settings.default_category if feed_settings else "Default Categoryx"
 
