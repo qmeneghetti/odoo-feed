@@ -25,11 +25,13 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>
-
-        <!-- Menú para acceder a la configuración -->
-        <menuitem id="menu_feed_settings" 
-                  name="Configuración de Feed" 
-                  parent="base.menu_custom" 
-                  action="action_feed_settings" />
     </data>
+
+    <menuitem id="menu_feed_root" name="Gestión de Feed" sequence="10"/>
+
+    <menuitem id="menu_feed_settings" 
+            name="Configuración de Feed" 
+            parent="menu_feed_root" 
+            action="action_feed_settings" 
+            sequence="20"/>
 </odoo>
