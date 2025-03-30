@@ -23,16 +23,15 @@
             <field name="name">Configuración del Feed</field>
             <field name="res_model">feed.settings</field>
             <field name="view_mode">form</field>
-            <field name="target">current</field>
+            <field name="target">new</field>
         </record>
     </data>
 
     <menuitem id="menu_feed_root" name="Gestión de Feed" sequence="10"/>
 
     <menuitem id="menu_feed_settings" 
-          name="Configuración de Feed" 
-          parent="website.menu_website"  
-          action="action_feed_settings" 
-          sequence="20"/>
-
+            name="Configuración de Feed" 
+            parent="menu_feed_root" 
+            action="action_feed_settings" 
+            sequence="20"/>
 </odoo>
