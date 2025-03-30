@@ -20,7 +20,7 @@ class ProductFeedController(http.Controller):
             ET.SubElement(product_el, "name").text = product.name
             ET.SubElement(product_el, "description").text = product.description_sale or product.name
             ET.SubElement(product_el, "price").text = str(product.list_price)
-             ET.SubElement(product_el, "google_shop").text = str(product.google_category)
+            ET.SubElement(product_el, "google_shop").text = str(product.google_category) or ""
             ET.SubElement(product_el, "currency").text = product.currency_id.name
             ET.SubElement(product_el, "url").text = request.httprequest.host_url + "shop/product/" + str(product.id)
             ET.SubElement(product_el, "image").text = product.image_1920 and request.httprequest.host_url + "web/image/product.template/" + str(product.id) + "/image_1920"
