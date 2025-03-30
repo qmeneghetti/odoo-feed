@@ -23,11 +23,11 @@
         <field name="name">feed.settings.tree</field>
         <field name="model">feed.settings</field>
         <field name="arch" type="xml">
-            <tree string="Configuración del Feed">
+            <list string="Configuración del Feed">
                 <field name="name"/>
                 <field name="shipping_cost"/>
                 <field name="default_category"/>
-            </tree>
+            </list>
         </field>
     </record>
 

@@ -3,7 +3,7 @@
     "summary": "Genera un feed XML para Google Shopping y Facebook",
     'category': 'Sales',
     "author": "Quetzal Meneghetti",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "depends": ["base","website", "product"],
     "data": [
         "security/ir.model.access.csv",  # Añadir esta línea
