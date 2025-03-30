@@ -7,6 +7,7 @@
     <menuitem id="menu_feed_settings" 
               name="Configuración de Feed" 
               parent="menu_feed_root" 
-              action="action_feed_settings" 
+              action="action_feed_settings"
+              groups="base.group_user"
               sequence="20"/>
 </odoo>
