@@ -19,8 +19,8 @@
     </record>
 
     <!-- Vista de lista (añadir esta vista) -->
-    <record id="view_feed_settings_tree" model="ir.ui.view">
-        <field name="name">feed.settings.tree</field>
+    <record id="view_feed_settings_list" model="ir.ui.view">
+        <field name="name">feed.settings.list</field>
         <field name="model">feed.settings</field>
         <field name="arch" type="xml">
             <list string="Configuración del Feed">
