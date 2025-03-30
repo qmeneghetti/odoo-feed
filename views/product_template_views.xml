@@ -3,7 +3,7 @@
     <record id="view_product_template_form_google_category" model="ir.ui.view">
         <field name="name">product.template.form.google.category</field>
         <field name="model">product.template</field>
-        <field name="inherit_id" ref="product.template.common.form"/>  
+        <field name="inherit_id" ref="product.product_template_form_view"/>  
         <field name="arch" type="xml">
             <!-- Intenta insertarlo dentro del grupo de contabilidad -->
             <xpath expr="//notebook" position="inside">
