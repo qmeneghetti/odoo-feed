@@ -4,7 +4,7 @@
     <record id="action_feed_settings" model="ir.actions.act_window">
         <field name="name">Configuración de Feed</field>
         <field name="res_model">feed.settings</field>
-        <field name="view_mode">form"/>
+        <field name="view_mode">form</field>
         <field name="view_id" ref="view_feed_settings_form"/>
         <field name="target">current</field>
     </record>
