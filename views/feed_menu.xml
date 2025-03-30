@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Menú principal para el módulo -->
+    <menuitem id="menu_feed_root" name="Gestión de Feeds" sequence="10"/>
+
+    <!-- Submenú dentro de Gestión de Feed -->
+    <menuitem id="menu_feed_settings" 
+              name="Configuración de Feed" 
+              parent="menu_feed_root" 
+              action="action_feed_settings" 
+              sequence="20"/>
+</odoo>
