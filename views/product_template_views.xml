@@ -6,8 +6,12 @@
         <field name="inherit_id" ref="product.template.common.form"/>  
         <field name="arch" type="xml">
             <!-- Intenta insertarlo dentro del grupo de contabilidad -->
-            <xpath expr="//page[@name='contabilidad']/group" position="inside">
-                <field name="google_category"/>
+            <xpath expr="//notebook" position="inside">
+                <page string="Google Shopping">
+                    <group>
+                        <field name="google_category"/>
+                    </group>
+                </page>
             </xpath>
         </field>
     </record>
